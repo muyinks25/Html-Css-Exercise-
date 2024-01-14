@@ -1,0 +1,443 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+ header {
+  background-color: black;
+    color: #fff;
+    padding: 5px 0;
+ }
+nav{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  min-height: 8vh;
+  background-color: black
+}
+.container {
+  color: rgb(226,226,226);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+.nav-links{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  list-style: none;
+  gap: 50px;
+
+}
+.nav-links li{
+  list-style: none;
+}
+
+.nav-links a{
+  color: rgb(226,226,226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-family: 14px;
+}
+.nav-links li a{
+  font-weight: bold;
+}
+.burger{
+  display: none;
+  cursor: pointer;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226,226,226);
+  margin: 5px;
+  transition: all 0.3s ease;
+
+}
+
+
+@media screen and (max-width:1024px){
+  .nav-links{
+    width: 60%;
+  }
+  
+}
+
+@media screen and (max-width:768px){
+
+  body{
+    overflow-x: hidden;
+  }
+  .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top :8vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    transform: translateX(100%);
+    transition:transform 0.5s ease-in ;
+  }
+  
+  .nav-link li {
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+}
+
+.nav-active{
+  transform: translateX(0%); 
+}
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform:  translateX(0px);
+
+  }
+}
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+
+}
+.toggle .line2{
+  opacity: 0;
+  
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+
+}
+
+.page-content h3 {
+  color:black ; 
+  margin-top: 20px;
+}
+
+/* Style for the list under the h3 */
+.page-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page-content li {
+  margin-bottom: 10px;
+}
+
+/* Style for the list items (bullets or numbers) */
+.page-content li::before {
+  content: '\2022'; 
+  color: #007BFF; 
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+
+
+
+.main-image {
+  width: 100%;
+  height: auto;
+  
+}
+.page-content{
+  display: none;
+}
+
+
+.page-content h2 {
+  color: #333;
+}
+
+.page-content{
+  display: flex;
+}
+
+.page-content p {
+  color:black;
+  line-height: 1.5;
+}
+
+
+#contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#contact-form button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the booking inquiry form */
+#booking-inquiry-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#booking-inquiry-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#booking-inquiry-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#booking-inquiry-form button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+#booking-inquiry-form button:hover {
+  background-color: #218838;
+}
+
+
+
+
+
+/* Style for the image overlay container */
+.image-overlay-container {
+  position: relative;
+  display: flex;
+  
+}
+
+/* Style for the image overlay text */
+.image-overlay-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgba(0, 0,0,0.7);
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out; 
+}
+
+/* Style for the overlay text heading (h3) */
+.image-overlay-text h2 {
+  font-size: 40px; 
+  margin-bottom: 10px;
+  font-family: Unica One;
+}
+
+/* Style for the overlay text paragraph (p) */
+.image-overlay-text p {
+  font-size: 40px;
+  font-family: sacramento;
+  
+   /* Set  for the font size */
+}
+
+.image-overlay-text {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   
+}
+/* Hover effect to show the overlay text */
+.image-overlay-container:hover .image-overlay-text {
+    opacity: 1;
+}
+
+/* style for about us content */
+.about-us-content {
+  padding: px;
+  background-color: #fff;
+  padding-bottom: 35%;
+
+}
+
+.about-us-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-us-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-us-content li {
+  position:relative;
+  padding-left: 30px; 
+  margin-bottom: 10px; 
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.about-us-content ul li {
+  font-family:roboto;
+  font-size: 16px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.about-us-content li::before {
+  content: '\2022'; 
+  color: #000;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+p.uppercase{
+  text-align: flex;
+  color: #000;
+  margin-bottom:5%;
+  margin-top: 5%;
+  font-size: 32px;
+}
+p.lowercase{
+  margin: bottom 5px;
+  margin-top: 2px;
+  color: #000;
+  
+}
+p.big {
+  margin-top: 20px;
+  color: #000
+}
+
+.small-image {
+  max-width: 100%; 
+  height: auto; 
+  margin-inline-start: 30px;
+  
+}
+
+.small {
+  max-width: 100%; 
+  height: auto; 
+  margin: 20px 70px  ;  
+  float: right;
+  clear: both;
+  margin-top: 15%;
+ 
+}
+
+.small-image:hover,
+.small:hover {
+    transform: scale(1.1); 
+}
+
+.image-container {
+  text-align: center; 
+  background-color: #fff;;
+  
+}
+ 
+.about-us-content .footer {
+  padding: 20px 0;
+  background-color: #333;
+}
+
+.about-us-content .footer a {
+  color: #fff;
+}
+
+/*  styles to the written content */
+#written-content {
+  text-align: center;
+  display:inline;
+   
+  color:#333; 
+}
+
+
+#written-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+/* Style for Apartment */
+
+.carousel-indicators {
+  height: 30px;
+  width: 30px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  height: 40%; 
+  width: 40%; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px; 
+  height: 30px; 
+  background-color: transparent; 
+  border: none; 
+
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 30px; 
+  width: 30px; 
+  background-color: #000;
+  color:#28a745;
+
+    
+}
+.carousel{
+  height: 50%;
+  width: 50%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  top:50%; 
+  transform: translateY(-60%); 
+}
